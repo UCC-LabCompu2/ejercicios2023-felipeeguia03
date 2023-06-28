@@ -5,8 +5,8 @@
  * @param {number} valor - El valor de los inputs de metros, yardas, pies o pulgdas
  * @return
  */
- cambiarUnidades = (id, valor ) => {
-    let met, pie, pul, yar;
+ function cambiarUnidades (id, valor )  {
+    var met, pie, pul, yar;
     if(valor.includes(",")) {
         valor = valor.replace(",", ".")
     }
@@ -38,10 +38,10 @@
         pul = 36 * valor;
         yar = valor;
     }
-    document.lasUnidades.unid_metro.value = Math.round(met*100)/100;
-    document.lasUnidades.unid_pulgada.value = Math.round(pul*100)/100;
-    document.lasUnidades.unid_pie.value = Math.round(pie);
-    document.lasUnidades.unid_yarda.value = Math.round(yar);
+    document.lasunidades.unid_metro.value = Math.round(met*100)/100;
+    document.lasunidades.unid_pulgada.value = Math.round(pul*100)/100;
+    document.lasunidades.unid_pie.value = Math.round(pie);
+    document.lasunidades.unid_yarda.value = Math.round(yar);
 }
 function mostrar_ocultar(valorMO){
     if(valorMO=="val_mostrar"){
