@@ -126,7 +126,13 @@ function cargarlocalstorage () {
 function dibujarCirCuad(){
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
-    ctx.fillstyle= "#333899";
-    ctx.fillRect(0,0,40,40);
+    var ymax = canvas.height;
+    var xmax = canvas.width
+    var margen = 5;
 
+    ctx.fillstyle= "#9b9ff1";
+    ctx.fillRect(margen,ymax-40-margen,40,40);
+    ctx.arc(xmax/2,ymax/2,20,0,2*Math.PI)
+    ctx.stroke();
+    ctx.fill;
 }
