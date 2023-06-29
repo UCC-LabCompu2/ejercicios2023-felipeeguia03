@@ -107,6 +107,22 @@ function cargarResultado(){
 
 }
 
+function guardarlocalstorage(){
+     let distancia,unidad;
+     distancia = document.getElementById("distancia").value;
+     unidad = document.getElementsByName("unidades")[0].value;
+     localStorage.setItem("distanciaLS",distancia);
+     localStorage.setItem("unidadesLS",unidad);
+     window.open("2_web.html")
+}
+function cargarlocalstorage () {
+     let cant, uni;
+     cant = localStorage.getItem("distanciaLS");
+     uni = localStorage.getItem("unidadesLS");
+
+     document.getElementById("dist").value = cant + " " + uni;
+}
+
 function dibujarCirCuad(){
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
